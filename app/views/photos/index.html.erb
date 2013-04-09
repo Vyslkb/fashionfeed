@@ -3,16 +3,24 @@
 <h1>Listing photos</h1>
 
 <div id="overlay" onclick="FASHIONFEED.hideOverlay();">
-<div class="bigimage">
+<div id="bigimage-container">
+
 <img id="bigimage" src="" />
+
 </div>
+
+<div id="overlay-bg"></div>
+
 </div>
 
 <% @photos.each do |photo| %>
-<% randomRot = rand(-10...10) * 5 %>
-<div class="fashion-img-container" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */">
+<% 
+  randomRot = rand(-10...10) * 5  
+  randomWidth = rand(50...150)
+%>
+<div class="fashion-img-container" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */ ">
  <a href="#<%= photo.id %>" onclick="FASHIONFEED.showOverlay('<%= photo.image_url %>')">
- <%= image_tag(photo.image_url, :class => "fashion") %>
+ <%= image_tag(photo.image_url, :class => "fashion", :width => randomWidth) %>
 </a>
     <div class="elementui">
       <%= link_to 'Show', photo %>

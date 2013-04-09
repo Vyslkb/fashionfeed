@@ -37,4 +37,6 @@ FASHIONFEED.showOverlay = function(hash_str){
 
 FASHIONFEED.hideOverlay = function(){
 	$("#overlay").css('display','none');
+	location.hash = "";
+
 }

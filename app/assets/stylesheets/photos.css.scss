@@ -1,8 +1,11 @@
 // Place all the styles related to the Photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+	text-align:center;
+}
 img.fashion{
-	width:100%;
+
 	float:left;
 }
 .elementui{
@@ -10,28 +13,46 @@ img.fashion{
 }
 .fashion-img-container{
 	float:left;
-	overflow:hidden;
+
 	height:80px;
 	width:80px;
 	-moz-box-shadow: 1px 1px 3px #888;
 	-webkit-box-shadow: 1px 1px 3px #888;
 	box-shadow: 1px 1px 3px #888;
+	margin:2px;
 	
 }
 .fashion-img-container:hover{
-		transform: rotate(0deg) !important;
-		-ms-transform: rotate(0deg) !important; /* IE 9 */
-		-webkit-transform: rotate(0deg) !important; /* Safari and Chrome */
+		border:2px solid #fff;
+		margin:0;
 
 	}
 #overlay{
 	display:none;
 	position:absolute;
 	z-index:99;
-	opacity:0.9;
+
+top:0;
+bottom:0;
+left:0;
+right:0;
+
+}
+#overlay-bg{
+z-index:-1;
+position:absolute;
+		opacity:0.9;
 	background:#000;
 top:0;
 bottom:0;
 left:0;
 right:0;
+}
+#bigimage-container{
+	margin-top:50%;
+	height:100%;
+	width:100%;
+}
+#bigimage{
+	margin-top:-50%;
 }
