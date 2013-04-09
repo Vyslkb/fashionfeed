@@ -1,0 +1,28 @@
+<%= will_paginate(@photos) %>
+
+<h1>Listing photos</h1>
+
+<div id="overlay" onclick="FASHIONFEED.hideOverlay();">
+<div class="bigimage">
+<img id="bigimage" src="" />
+</div>
+</div>
+
+<% @photos.each do |photo| %>
+<% randomRot = rand(-10...10) * 5 %>
+<div class="fashion-img-container" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */">
+ <a href="#<%= photo.id %>" onclick="FASHIONFEED.showOverlay('<%= photo.image_url %>')">
+ <%= image_tag(photo.image_url, :class => "fashion") %>
+</a>
+    <div class="elementui">
+      <%= link_to 'Show', photo %>
+    <%= link_to 'Edit', edit_photo_path(photo) %>
+    <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+</div>
+<% end %>
+
+
+
+<br />
+
+<%= link_to 'New Photo', new_photo_path %>
