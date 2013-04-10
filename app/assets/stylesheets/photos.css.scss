@@ -1,8 +1,12 @@
 // Place all the styles related to the Photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body{
-	text-align:center;
+
+#container{
+	margin: 0 auto;
+	background:#ffffff;
+	padding:10px;
+	background-image: image-url("cork.jpg");
 }
 .item {
 

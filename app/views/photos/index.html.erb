@@ -15,8 +15,8 @@
 <div id="container">
 <% @photos.each do |photo| %>
 <% 
-  randomRot = 0
-  # randomRot = rand(0...0) * 5  
+  #randomRot = 0
+   randomRot = rand(-5...5)  
   randomWidth = rand(120...240)
 %>
 <div class="fashion-img-container item" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */ ">

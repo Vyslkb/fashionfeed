@@ -42,7 +42,7 @@ $container.imagesLoaded(function(){
   $container.masonry({
 
      itemSelector: '.item',
-  columnWidth: 120,
+  columnWidth: 20,
   isAnimated: true,
   isFitWidth: true
   });
