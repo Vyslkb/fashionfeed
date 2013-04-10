@@ -4,6 +4,22 @@
 body{
 	text-align:center;
 }
+.item {
+
+  margin: 10px;
+  float: left;
+  -moz-box-shadow: 1px 1px 3px #888;
+-webkit-box-shadow: 1px 1px 3px #888;
+box-shadow: 1px 1px 3px #888;
+opacity:0.5;
+
+}
+.item:hover{
+	border:10px solid #fcd;
+	margin:0;
+			z-index:98;
+}
+
 img.fashion{
 
 	float:left;
@@ -11,22 +27,8 @@ img.fashion{
 .elementui{
 	display:none;
 }
-.fashion-img-container{
-	float:left;
 
-	height:80px;
-	width:80px;
-	-moz-box-shadow: 1px 1px 3px #888;
-	-webkit-box-shadow: 1px 1px 3px #888;
-	box-shadow: 1px 1px 3px #888;
-	margin:2px;
-	
-}
-.fashion-img-container:hover{
-		border:2px solid #fff;
-		margin:0;
 
-	}
 #overlay{
 	display:none;
 	position:absolute;

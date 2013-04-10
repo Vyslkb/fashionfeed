@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.masonry.min
 
 $(document).ready(function(){
 	FASHIONFEED.init();
@@ -27,7 +28,27 @@ FASHIONFEED.init = function(){
 		//alert(location.hash.substring(1));
 		FASHIONFEED.showOverlay(location.hash.substring(1));
 	}
-$('')
+	/*
+$(function(){
+  $('#container').masonry({
+    // options
+    itemSelector : '.item',
+    columnWidth : 240
+  });
+});
+*/
+var $container = $('#container');
+$container.imagesLoaded(function(){
+  $container.masonry({
+
+     itemSelector: '.item',
+  columnWidth: 120,
+  isAnimated: true,
+  isFitWidth: true
+  });
+  $('.item').css('opacity',1.0);
+});
+
 }
 FASHIONFEED.showOverlay = function(hash_str){
 	$("#overlay").css('display','block');
