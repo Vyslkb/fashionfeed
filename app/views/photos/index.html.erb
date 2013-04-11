@@ -2,14 +2,14 @@
 
 <h1>Listing photos</h1>
 
-<div id="overlay" onclick="FASHIONFEED.hideOverlay();">
+<div id="overlay" >
 <div id="bigimage-container">
 
-<img id="bigimage" src="" />
+
 
 </div>
 
-<div id="overlay-bg"></div>
+<div id="overlay-bg" onclick="FASHIONFEED.hideOverlay();"></div>
 
 </div>
 <div id="container">
@@ -17,10 +17,10 @@
 <% 
   #randomRot = 0
    randomRot = rand(-5...5)  
-  randomWidth = rand(120...240)
+  randomWidth = rand(80...180)
 %>
 <div class="fashion-img-container item" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */ ">
- <a href="#<%= photo.id %>" onclick="FASHIONFEED.showOverlay('<%= photo.image_url %>')">
+ <a href="#<%= photo.id %>" onclick="FASHIONFEED.showOverlay('<%= photo.id %>')">
  <%= 
   image_tag(photo.image_url, :class => "fashion", :width => randomWidth)
 # image_tag(photo.image_url, :class => "fashion")

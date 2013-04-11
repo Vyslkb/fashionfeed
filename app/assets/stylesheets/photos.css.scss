@@ -7,6 +7,7 @@
 	background:#ffffff;
 	padding:10px;
 	background-image: image-url("cork.jpg");
+	border-radius:20px;
 }
 .item {
 
@@ -16,6 +17,8 @@
 -webkit-box-shadow: 1px 1px 3px #888;
 box-shadow: 1px 1px 3px #888;
 opacity:0.5;
+border-radius:5px;
+overflow:hidden;
 
 }
 .item:hover{
@@ -35,7 +38,7 @@ img.fashion{
 
 #overlay{
 	display:none;
-	position:absolute;
+	position:fixed;
 	z-index:99;
 
 top:0;
@@ -59,6 +62,7 @@ right:0;
 	height:100%;
 	width:100%;
 }
-#bigimage{
+.bigimage{
 	margin-top:-50%;
+	opacity:0;
 }
