@@ -152,8 +152,11 @@ function onError(){
 
 FASHIONFEED.hideOverlay = function(){
 	//$("#overlay").css('display','none');
-	location.hash = "";
+  var scrollmem = $('body').scrollTop();
+//window.location.hash = hash;
 
+	location.hash = "";
+$('html,body').scrollTop(scrollmem);
   
   $("#overlay").css('opacity',1.0);
 
