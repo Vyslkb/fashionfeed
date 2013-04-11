@@ -21,6 +21,13 @@ border-radius:5px;
 overflow:hidden;
 
 }
+p#bigimage-caption{
+	font-weight: 700;
+color: #fff;
+font-size: 150%;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+}
 .item:hover{
 	border:10px solid #fcd;
 	margin:0;

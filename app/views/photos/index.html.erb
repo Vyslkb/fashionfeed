@@ -6,7 +6,7 @@
 <div id="bigimage-container">
 
 
-
+<p id="bigimage-caption"></p>
 </div>
 
 <div id="overlay-bg" onclick="FASHIONFEED.hideOverlay();"></div>
@@ -15,9 +15,9 @@
 <div id="container">
 <% @photos.each do |photo| %>
 <% 
-  #randomRot = 0
-   randomRot = rand(-5...5)  
-  randomWidth = rand(80...180)
+  randomRot = 0
+#   randomRot = rand(-5...5)  
+  randomWidth = rand(80...280)
 %>
 <div class="fashion-img-container item" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */ ">
  <a href="#<%= photo.id %>" onclick="FASHIONFEED.showOverlay('<%= photo.id %>')">

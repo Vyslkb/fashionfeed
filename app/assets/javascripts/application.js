@@ -55,7 +55,9 @@ FASHIONFEED.setBigImage  = function(data){
 
 
   var newImgID = 'img'+data.id;
-  $("#bigimage-container").append('<img id="'+newImgID+'" class="bigimage" src="'+data.image_url+'" onclick="FASHIONFEED.nextBigImage()" />')
+  $("#bigimage-container").prepend('<img id="'+newImgID+'" class="bigimage" alt="'+data.designer+'" src="'+data.image_url+'" onclick="FASHIONFEED.nextBigImage()" />')
+  $("#bigimage-caption").text(data.designer);
+  
   $("#"+newImgID).animate({
     opacity: 1.0
   }, 200, function() {

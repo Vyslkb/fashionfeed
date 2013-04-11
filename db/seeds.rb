@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -5,6 +6,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
 images_list = [
 "000_maisoncoudert-2.jpg",
 "001_maisoncoudert_copie-2.jpg",
@@ -2988,7 +2991,6 @@ images_list = [
 "lemoine_tricote_aw12_030_copie.jpg",
 "lemoine_tricote_aw12_031_copie.jpg",
 "lemoine_tricote_aw12_032_copie.jpg",
-"list.txt",
 "look1-2.jpg",
 "look10-2.jpg",
 "look11-2.jpg",
@@ -3471,8 +3473,6 @@ images_list = [
 "olympia_le_tan_ss13_048_copie.jpg",
 "olympia_le_tan_ss13_051_copie.jpg",
 "olympia_le_tan_ss13_052_copie.jpg",
-"recipe-362459-1.py",
-"remove_duplicates.py",
 "romain_kremer_aw10_eap7-10_0001-2.jpg",
 "romain_kremer_aw10_eap7-10_0002-2.jpg",
 "romain_kremer_aw10_eap7-10_0003-2.jpg",
@@ -3499,7 +3499,6 @@ images_list = [
 "romain_kremer_aw10_eap7-10_0024-2.jpg",
 "romain_kremer_aw10_eap7-10_0025-2.jpg",
 "romain_kremer_aw10_eap7-10_0026-2.jpg",
-"script.sh",
 "steffie_christiaens06_copie-2.jpg",
 "steffie_christiaens09_copie-2.jpg",
 "steffie_christiaens10_copie-2.jpg",
@@ -3672,16 +3671,66 @@ images_list.each do |imgurl|
 	# determine the designer by the filename
 	# the case returns the string into designer_str
 	designer_str =	case imgurl
-		when /maisoncoudert/
+		when /maisoncoudert/ || /maison_coudert/
 		   "Maison Coudert"
 		when /aganovich/
 			"Aganovich"
-		when /IrisVanHerpen/
-			"Iris Van Herpen"
-		when /steffie_christiaens/
-			"Steffie Christiaens"
 		when /yiqing_yin/
 			"Yiqing Yin"
+		when /LE_MOINE_TRICOTE/ || /lemoine_tricote/
+			"Le Moine Tricote"
+		when /Lutz/
+			"Lutz"
+		when /adam_jones/
+			"Adam Jones"
+		when /alexandre/ || /avauthier/
+			"Alexandre Vauthier"
+		when /alexis_mabille/
+			"Alexis Mabille"
+		when /anne_/ || /avh\d/
+			"Anne Valerie Hash"
+		when /anthony_vaccarello/ || /anthony0/
+			"Anthony Vaccarello"
+		when /atelier_gustavo/ || /gustavo_lins/
+			"Gustavo Lins"
+		when /bouchra/
+			"Bouchra Jarrar"
+		when /cathy_pill_/
+			"Cathy Pill"
+		when /commuun/
+			"Commuun"
+		when /damir_doma/ || /DAMIR/
+			"Damir Doma"
+		when /IrisVanHerpen/ || /iris_van_herpen/
+			"Iris Van Herpen"
+		when /devastee/
+			"Devastee"
+		when /felipe/
+			"Felipe Oliveira Baptista"
+		when /gaspard/
+			"Gaspard Yurkievich"
+		when /jean_paul_lespagnard/
+			"Jean-Paul Lespagnard"
+		when /jeanpaulknott/
+			"Jean-Paul Knott"
+		when /julien_david_/
+			"Julien David"
+		when /julien_fournie/
+			"Julien_Fournié"
+		when /lefranc_ferrant/
+			"Lefranc Ferrant"
+		when /maison_rabih_kayrouz/
+			"Maison Rabih Kayrouz"
+		when /maxime_/
+			"Maxime Simoëns"
+		when /nicolas_andreas_taralis/ || /nicolasandreast/
+			"Nicolas_Andreas_Taralis"
+		when /olympia_le_tan/
+			"Olympia Le Tan"
+		when /romain_kremer/
+			"Romain Kremer"
+		when /steffie_christiaens/
+			"Steffie Christiaens"
 		else
 		  ""
 		end

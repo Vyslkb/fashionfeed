@@ -38,3 +38,6 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "will_paginate", "~> 3.0.pre2"
+
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
