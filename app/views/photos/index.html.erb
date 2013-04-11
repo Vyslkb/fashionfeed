@@ -17,7 +17,8 @@
 <% 
   randomRot = 0
 #   randomRot = rand(-5...5)  
-  randomWidth = rand(80...280)
+  randomWidth = rand(80...320)
+# randomWidth = 40
 %>
 <div class="fashion-img-container item" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */ ">
  <a href="#<%= photo.id %>" onclick="FASHIONFEED.showOverlay('<%= photo.id %>')">
