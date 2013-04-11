@@ -3668,5 +3668,24 @@ images_list = [
 ]
 
 images_list.each do |imgurl|
-	Photo.create(image_url: ("http://cameronbrowning.com/fashion/"+imgurl))
+
+	# determine the designer by the filename
+	# the case returns the string into designer_str
+	designer_str =	case imgurl
+		when /maisoncoudert/
+		   "Maison Coudert"
+		when /aganovich/
+			"Aganovich"
+		when /IrisVanHerpen/
+			"Iris Van Herpen"
+		when /steffie_christiaens/
+			"Steffie Christiaens"
+		when /yiqing_yin/
+			"Yiqing Yin"
+		else
+		  ""
+		end
+
+		# future improvement: store the base URL in one place?
+		Photo.create(image_url: ("http://cameronbrowning.com/fashion/"+imgurl), designer: designer_str)
 end
