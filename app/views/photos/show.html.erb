@@ -8,6 +8,10 @@
   <b>Designer:</b>
   <%= @photo.designer %>
 </p>
+<p>
+  <b>Column Span:</b>
+  <%= @photo.colspan %>
+</p>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

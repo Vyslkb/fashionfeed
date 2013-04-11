@@ -3671,27 +3671,39 @@ images_list.each do |imgurl|
 	# determine the designer by the filename
 	# the case returns the string into designer_str
 	designer_str =	case imgurl
-		when /maisoncoudert/ || /maison_coudert/
+		when /maisoncoudert/ 
+			 "Maison Coudert"
+		when /maison_coudert/
 		   "Maison Coudert"
 		when /aganovich/
 			"Aganovich"
 		when /yiqing_yin/
 			"Yiqing Yin"
-		when /LE_MOINE_TRICOTE/ || /lemoine_tricote/
+		when /LE_MOINE_TRICOTE/ 
+			"Le Moine Tricote"
+		when /lemoine_tricote/
 			"Le Moine Tricote"
 		when /Lutz/
 			"Lutz"
 		when /adam_jones/
 			"Adam Jones"
-		when /alexandre/ || /avauthier/
+		when /alexandre/ 
+			"Alexandre Vauthier"
+		when /avauthier/
 			"Alexandre Vauthier"
 		when /alexis_mabille/
 			"Alexis Mabille"
-		when /anne_/ || /avh\d/
+		when /anne_/ 
 			"Anne Valerie Hash"
-		when /anthony_vaccarello/ || /anthony0/
+		when /avh\d/
+			"Anne Valerie Hash"
+		when /anthony_vaccarello/
 			"Anthony Vaccarello"
-		when /atelier_gustavo/ || /gustavo_lins/
+		when /anthony0/
+			"Anthony Vaccarello"
+		when /atelier_gustavo/
+			"Gustavo Lins"
+		when /gustavo_lins/
 			"Gustavo Lins"
 		when /bouchra/
 			"Bouchra Jarrar"
@@ -3699,9 +3711,13 @@ images_list.each do |imgurl|
 			"Cathy Pill"
 		when /commuun/
 			"Commuun"
-		when /damir_doma/ || /DAMIR/
+		when /damir_doma/ 
 			"Damir Doma"
-		when /IrisVanHerpen/ || /iris_van_herpen/
+		when /DAMIR/
+			"Damir Doma"
+		when /IrisVanHerpen/ 
+			"Iris Van Herpen"
+		when /iris_van_herpen/
 			"Iris Van Herpen"
 		when /devastee/
 			"Devastee"
@@ -3723,8 +3739,10 @@ images_list.each do |imgurl|
 			"Maison Rabih Kayrouz"
 		when /maxime_/
 			"Maxime Simoëns"
-		when /nicolas_andreas_taralis/ || /nicolasandreast/
-			"Nicolas_Andreas_Taralis"
+		when /nicolas_andreas_taralis/ 
+			"Nicolas Andreas Taralis"
+		when /nicolasandreast/
+			"Nicolas Andreas Taralis"
 		when /olympia_le_tan/
 			"Olympia Le Tan"
 		when /romain_kremer/
@@ -3735,6 +3753,22 @@ images_list.each do |imgurl|
 		  ""
 		end
 
+
+if designer_str!="" then
+
+		r_int = rand(0...40)
+		if r_int < 2 then
+			colspan_int = 3
+		elsif r_int < 10 then
+			colspan_int = 2
+		elsif r_int < 20 then
+			colspan_int = 1
+		else
+			colspan_int = 0
+		end
+			
+	
 		# future improvement: store the base URL in one place?
-		Photo.create(image_url: ("http://cameronbrowning.com/fashion/"+imgurl), designer: designer_str)
+		Photo.create(image_url: ("http://cameronbrowning.com/fashion/"+imgurl), designer: designer_str, colspan: colspan_int)
+end
 end

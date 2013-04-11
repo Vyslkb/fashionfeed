@@ -1,23 +1,59 @@
 // Place all the styles related to the Photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-#container{
-	margin: 0 auto;
-	background:#ffffff;
+.pagination{
+	margin: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 150%;
+	a{
 	padding:10px;
-	background-image: image-url("cork.jpg");
-	border-radius:20px;
+	border-radius:5px;
+	text-decoration:none;
+	}
+	a:hover{
+
+	}
+}
+#bigimage-editlink{
+letter-spacing:0.1em;
+	color:#ccc;
+	&:visited {
+    color: #bbb;
+  }
+  &:hover {
+    color: #fcd;
+  
+  }
+
+}
+
+h1{
+	text-transform: uppercase;
+letter-spacing: 1.5em;
+color:#eee;
+font-weight:normal;
+font-size:250%;
+margin-bottom:1.5em;
+line-height:1.5em;
+}
+#container{
+margin: 0 auto;
+padding: 0px;
+background-position-x: 5px;
+background-image: url(/assets/grid.png);
+min-width:400px;
 }
 .item {
 
   margin: 10px;
-  float: left;
+  
+
   -moz-box-shadow: 1px 1px 3px #888;
 -webkit-box-shadow: 1px 1px 3px #888;
 box-shadow: 1px 1px 3px #888;
 opacity:0.5;
-border-radius:5px;
+border-radius:0px;
 overflow:hidden;
 
 }
@@ -47,7 +83,7 @@ img.fashion{
 	display:none;
 	position:fixed;
 	z-index:99;
-
+padding-top: 50%;
 top:0;
 bottom:0;
 left:0;
@@ -65,7 +101,7 @@ left:0;
 right:0;
 }
 #bigimage-container{
-	margin-top:50%;
+	margin-top: -10%;
 	height:100%;
 	width:100%;
 }

@@ -41,8 +41,8 @@ var $container = $('#container');
 $container.imagesLoaded(function(){
   $container.masonry({
 
-     itemSelector: '.item',
-  columnWidth: 20,
+  itemSelector: '.item',
+  columnWidth: 100,
   isAnimated: true,
   isFitWidth: true
   });
@@ -57,6 +57,7 @@ FASHIONFEED.setBigImage  = function(data){
   var newImgID = 'img'+data.id;
   $("#bigimage-container").prepend('<img id="'+newImgID+'" class="bigimage" alt="'+data.designer+'" src="'+data.image_url+'" onclick="FASHIONFEED.nextBigImage()" />')
   $("#bigimage-caption").text(data.designer);
+  $("#bigimage-editlink").attr("href","/photos/"+data.id+"/edit");
   
   $("#"+newImgID).animate({
     opacity: 1.0

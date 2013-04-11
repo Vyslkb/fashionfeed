@@ -1,12 +1,13 @@
-<%= will_paginate(@photos) %>
 
-<h1>Listing photos</h1>
+
+<h1>Front Row</h1>
 
 <div id="overlay" >
 <div id="bigimage-container">
 
 
 <p id="bigimage-caption"></p>
+<p> <a href="#" id="bigimage-editlink">[Edit]</a></p>
 </div>
 
 <div id="overlay-bg" onclick="FASHIONFEED.hideOverlay();"></div>
@@ -16,8 +17,9 @@
 <% @photos.each do |photo| %>
 <% 
   randomRot = 0
-#   randomRot = rand(-5...5)  
-  randomWidth = rand(80...320)
+#   randomRot = rand(-5...5)
+widths = [80,180,280,380]  
+  randomWidth = widths[photo.colspan]
 # randomWidth = 40
 %>
 <div class="fashion-img-container item" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */ ">
@@ -34,9 +36,13 @@
 </div>
 <% end %>
 </div>
-<a href="../index.html">index.html</a>
+
+<%= will_paginate(@photos) %>
+
+
 
 <br />
-
+<!--
 <%= link_to 'New Photo', new_photo_path %>
 
+-->
