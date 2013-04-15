@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require jquery.masonry.min
+//= require jquery.masonry.min.js
 
 $(document).ready(function(){
 	FASHIONFEED.init();
