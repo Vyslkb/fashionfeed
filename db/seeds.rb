@@ -3756,7 +3756,7 @@ images_list.each do |imgurl|
 
 if designer_str!="" then
 
-		r_int = rand(0...40)
+		r_int = rand(40)
 		if r_int < 2 then
 			colspan_int = 3
 		elsif r_int < 10 then
