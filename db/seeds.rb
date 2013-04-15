@@ -3769,6 +3769,6 @@ if designer_str!="" then
 			
 	
 		# future improvement: store the base URL in one place?
-		Photo.create(image_url: ("http://cameronbrowning.com/fashion/"+imgurl), designer: designer_str, colspan: colspan_int)
+		Photo.create(image_url: ("http://cameronbrowning.com/fashion/"+imgurl), designer: designer_str, colspan: colspan_int, event: "Paris Fashion Week")
 end
 end

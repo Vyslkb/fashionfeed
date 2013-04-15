@@ -58,6 +58,7 @@ FASHIONFEED.setBigImage  = function(data){
   $("#bigimage-container").prepend('<img id="'+newImgID+'" class="bigimage" alt="'+data.designer+'" src="'+data.image_url+'" onclick="FASHIONFEED.nextBigImage()" />')
   $("#bigimage-caption").text(data.designer);
   $("#bigimage-editlink").attr("href","/photos/"+data.id+"/edit");
+  $("#bigimage-event").text(data["event"]);
   
   $("#"+newImgID).animate({
     opacity: 1.0
@@ -65,6 +66,11 @@ FASHIONFEED.setBigImage  = function(data){
     // Animation complete.
 
   });
+  var viewport = {
+    width : $(window).width(),
+    height : $(window).height()
+};
+$('img.bigimage').css('height',viewport.height-120)
 
 }
 
@@ -113,6 +119,8 @@ FASHIONFEED.setBigImage(data);
 
     });
 }
+
+
 
 FASHIONFEED.showOverlay = function(photo_id){
 

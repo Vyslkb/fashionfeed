@@ -1,25 +1,40 @@
 // Place all the styles related to the Photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#overlay a{
+	padding:10px;
+	border-radius:5px;
+	text-decoration:none;
+
+	&:hover{
+
+
+	}
+	}
 .pagination{
 	margin: 20px;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	font-size: 150%;
-	a{
-	padding:10px;
-	border-radius:5px;
-	text-decoration:none;
-	}
-	a:hover{
+	
+}
 
-	}
+#bigimage-text p{
+	text-align:left;
+	margin: 30px 0 0 30px;
+}
+
+#bigimage-text{
+	float:left;
 }
 #bigimage-editlink{
 letter-spacing:0.1em;
-	color:#ccc;
+	color:#555;
 	&:visited {
-    color: #bbb;
+    color: #444;
+    text-align:left;
+
   }
   &:hover {
     color: #fcd;
@@ -57,12 +72,28 @@ border-radius:0px;
 overflow:hidden;
 
 }
+p#bigimage-text{
+
+	text-align:left;
+}
+p#bigimage-event{
+text-align: left;
+
+font-size: 100%;
+font-weight: bold;
+letter-spacing: 0.1em;
+color: #666;
+}
+
 p#bigimage-caption{
-	font-weight: 700;
+font-weight: normal;
 color: #fff;
-font-size: 150%;
-letter-spacing: 0.3em;
+font-size: 300%;
+letter-spacing: 0.5em;
 text-transform: uppercase;
+line-height:1em;
+
+text-align: left;
 }
 .item:hover{
 	border:10px solid #fcd;
@@ -83,15 +114,17 @@ img.fashion{
 	display:none;
 	position:fixed;
 	z-index:99;
-padding-top: 50%;
-top:0;
-bottom:0;
-left:0;
-right:0;
+
+
+top:30px;
+bottom:30px;
+left:30px;
+right:30px;
 
 }
 #overlay-bg{
 z-index:-1;
+border-radius:15px;
 position:absolute;
 		opacity:0.9;
 	background:#000;
@@ -101,11 +134,18 @@ left:0;
 right:0;
 }
 #bigimage-container{
-	margin-top: -10%;
-	height:100%;
-	width:100%;
+
+top: 30px;
+bottom:30px;
+left:30px;
+position:relative;
+
 }
 .bigimage{
-	margin-top:-50%;
+border-radius:5px;
+overflow:hidden;
+	width:auto;
+	height:100%;
 	opacity:0;
+	float:left;
 }

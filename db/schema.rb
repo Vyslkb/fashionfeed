@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411052257) do
+ActiveRecord::Schema.define(:version => 20130412011430) do
 
   create_table "photos", :force => true do |t|
     t.string   "image_url"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130411052257) do
     t.datetime "updated_at", :null => false
     t.string   "designer"
     t.integer  "colspan"
+    t.string   "event"
   end
 
 end
