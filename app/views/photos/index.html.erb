@@ -1,5 +1,3 @@
-
-
 <h1>Front Row</h1>
 
 <div id="overlay" >
@@ -15,12 +13,14 @@
 
 </div>
 <div id="container">
+
 <% @photos.each do |photo| %>
 <% 
   randomRot = 0
 #   randomRot = rand(-5...5)
 widths = [80,180,280,380]  
   randomWidth = widths[photo.colspan]
+
 # randomWidth = 40
 %>
 <div class="fashion-img-container item" style="transform:rotate(<%= randomRot %>deg) -ms-transform: rotate(<%= randomRot %>deg); /* IE 9 */ -webkit-transform: rotate(<%= randomRot %>deg); /* Safari and Chrome */ ">
